@@ -10,9 +10,11 @@
 // define variable hello and assign value as aquib
 // let hello = "aquib";
 // console.log(hello);
+// alert(hello)
 
 // var newdata = "haris";
 // console.log(newdata);
+// alert(newdata)
 
 // let messagebox;
 // messagebox = "world";
@@ -27,7 +29,7 @@
 // let admin;
 // let name;
 // name = "HASAN";
-// admin = name;
+// admin = name;/
 // alert(admin);
 
 // constants 
@@ -42,14 +44,16 @@
 // 1.number 
 // let n = 123;
 // let nf = 12.344;
+// alert(nf)
 
 // 2.bigint
 // let bigint = 1234567890n;
+// console.log(bigint)
 
 // 3.string
 // let str = "Hello";
 // let str2 = 'Single quotes are ok too';
-// let phrase = ${str} can embed another ${str2};
+// let phrase = `${str} ${str} ${str} can embed another`;
 // console.log(phrase);
 // alert( the result is ${1 + 2} );
 
@@ -63,7 +67,7 @@
 // console.log(age);
 
 // 6.undefine 
-// let data;
+// let data="hasan";
 // console.log(data);
 
 // 7.object for more complex data structures.
@@ -85,6 +89,7 @@
 // a2 = 30;
 // a3 = a1 + a2;
 // console.log(a3);
+// alert(a3)
 
 // 2.assignment operator 
 // a1 = 20;  //a1 = 20 + 30
@@ -92,8 +97,9 @@
 // console.log(a1);
 
 // let n = 2;
-// n += 5; // now n = 7 (same as n = n + 5)
-// n *= 2; // now n = 14 (same as n = n * 2)
+// n = 5;  //now n = 7 (same as n = n + 5)
+// n += 2; // now n = 14 (same as n = n * 2)
+// console.log(n)
 
 // alert( n ); // 14
 
@@ -101,11 +107,20 @@
 // x = -x;
 // alert( x ); //  unary negation was applied
 
+// console.log(true && false); 
+// console.log(true && true); 
+// console.log(1 && 0); 
+// console.log(1 && 2); 
+// console.log("1" && true); 
+// console.log("0" && true);
+
+
 // let z = 1, y = 3;
 // alert( y - z ); 
 
 // division  8 / 3
 // alert( 8 % 3 ); 
+
 
 // exponentional 2² 
 // alert( 2 ** 2 ); // 2² = 4
@@ -225,5 +240,5 @@
 // reverse()
 // URL https://www.w3schools.com/js/js_array_methods.asp
 
-On Tue, 11 Jun, 2024, 5:27 pm Rayyan Khan, <rayyankhan40000@gmail.com> wrote:
-Show quoted tex
+// On Tue, 11 Jun, 2024, 5:27 pm Rayyan Khan, <rayyankhan40000@gmail.com> wrote:
+// Show quoted tex
