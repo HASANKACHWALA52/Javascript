@@ -1,3 +1,7 @@
+
+
+
+
 // Arrays in JavaScript are a fundamental data structure used to store collections of values. 
 // They can hold various data types, including numbers, strings, objects, functions, and even other arrays. 
 // Arrays in JavaScript are zero-indexed, which means the first element is at index 0, 
