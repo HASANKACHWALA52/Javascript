@@ -11,7 +11,7 @@
 // You can create an array using either array literals or the Array constructor.
 
 // Using array literals
-// const fruits = ["apple", "banana", "cherry"];
+// const fruits = ["apple", "banana", "cherry" ,"pineapple"];
 // .................. 0 ...... 1 ...... 2 ...
 
 // Using the Array constructor
@@ -56,7 +56,7 @@
 // console.log(fruits); // ["apple", "banana", "cherry", "date"]
 
 // pop(): Removes and returns the last element from an array.
-// const fruits = ["apple", "banana", "cherry"];
+// const fruits = ["apple", "banana", "cherry", "date"];
 // const lastFruit = fruits.pop();
 // console.log(lastFruit); // "cherry"
 // console.log(fruits); // ["apple", "banana"]
@@ -75,27 +75,27 @@
 // concat(): Combines two or more arrays and returns a new array.
 // const fruits = ["apple", "banana"];
 // const color = ["red", "green"];
-// const combined = color.concat(fruits);
+// const combined = fruits.concat(color);
 // console.log(combined); // ["apple", "banana", "red", "green"]
 
 // slice(): Returns a shallow copy of a portion of an array into a new array.
-// const fruits = ["apple", "banana", "cherry", "date"];
-// const slicedFruits = fruits.slice(1, 3); // from index 1 (inclusive) to 3 (exclusive)
+// const fruits = ["apple", "banana", "cherry", "date" ,"time"];
+// const slicedFruits = fruits.slice(1, 4); // from index 1 (inclusive) to 3 (exclusive)
 // console.log(slicedFruits); // ["banana", "cherry"]
 
 // splice(): Adds or removes elements from an array at a specified index.
-// const fruits = ["apple", "banana", "cherry"];
-// fruits.splice(2, 2, "grape"); // Remove 1 element at index 1 and insert "grape"
+// const fruits = ["apple", "banana", "cherry", "date" ,"time"];
+// fruits.splice( 2, 3, "grape" ,"mango", "bro"); // Remove 1 element at index 1 and insert "grape"
 // console.log(fruits); // ["apple", "grape", "cherry"]
 
 // indexOf(): Returns the first index at which a given element is found in the array, or -1 if it's not found.
-// const fruits = ["apple", "banana", "cherry"];
-// const index = fruits.indexOf("banana");
+// const fruits = ["apple", "banana", "cherry" ,"mango"];
+// const index = fruits.indexOf("mango");
 // console.log(index); // 1
 
 // includes(): Checks whether an element exists in the array and returns true or false.
-// const fruits = ["apple", "banana", "cherry"];
-// const hasCherry = fruits.includes("cherry");
+// const fruits = ["apple", "banana", "cherry", "mango"];
+// const hasCherry = fruits.includes("date");
 // console.log(hasCherry); // true
 
 // Iterating Through an Array:
