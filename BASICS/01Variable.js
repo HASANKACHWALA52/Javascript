@@ -1,5 +1,5 @@
-var fullName = "Kiran Kamath";
-var courseName = "ReactJs BootCamp";
+// var fullName = "Kiran Kamath";   
+// var courseName = "ReactJs BootCamp";
 var isLoggedIn = true;
 var loggedCount = 34;
 
