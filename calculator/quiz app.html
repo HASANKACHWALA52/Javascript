@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Quiz App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f0f0f0;
+    }
+    .quiz {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .question {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .options {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 10px;
+      margin-bottom: 20px;
+    }
+    .option {
+      display: block;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .option:hover {
+      background-color: #f0f0f0;
+    }
+    .button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .button:hover {
+      background-color: #0056b3;
+    }
+    .result {
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="quiz">
+    <div class="question" id="question"></div>
+    <div class="options" id="options"></div>
+    <button class="button" onclick="nextQuestion()">Next</button>
+    <div class="result" id="result"></div>
+    <div id="timer"></div>
+  </div>
+
+  <script>
+    const quizData = [
+      {
+        question: "What is the capital of France?",
+        options: ["Paris", "London", "Berlin", "Madrid"],
+        answer: "Paris"
+      },
+      {
+        question: "Which planet is known as the Red Planet?",
+        options: ["Earth", "Jupiter", "Mars", "Saturn"],
+        answer: "Mars"
+      },
+      {
+        question: "Who wrote 'Romeo and Juliet'?",
+        options: ["Charles Dickens", "Jane Austen", "William Shakespeare", "Mark Twain"],
+        answer: "William Shakespeare"
+      },
+      {
+        question: "What is the tallest mountain in the world?",
+        options: ["Mount Everest", "K2", "Kangchenjunga", "Makalu"],
+        answer: "Mount Everest"
+      }
+    ];
+
+    let currentQuestion = 0;
+    let score = 0;
+    const quizContainer = document.querySelector('.quiz');
+    const questionElement = document.getElementById('question');
+    const optionsElement = document.getElementById('options');
+    const resultElement = document.getElementById('result');
+    const timerElement = document.getElementById('timer');
+
+    function startQuiz() {
+      showQuestion();
+      startTimer(60); // 60 seconds countdown
+    }
+
+    function showQuestion() {
+      resetOptions();
+      questionElement.textContent = quizData[currentQuestion].question;
+      quizData[currentQuestion].options.forEach(option => {
+        const optionElement = document.createElement('div');
+        optionElement.textContent = option;
+        optionElement.classList.add('option');
+        optionElement.onclick = () => checkAnswer(option);
+        optionsElement.appendChild(optionElement);
+      });
+    }
+
+    function resetOptions() {
+      optionsElement.innerHTML = '';
+    }
+
+    function checkAnswer(answer) {
+      if (answer === quizData[currentQuestion].answer) {
+        score++;
+      }
+      // Disable further clicking on options
+      const options = document.querySelectorAll('.option');
+      options.forEach(option => {
+        option.onclick = null;
+        option.style.cursor = 'not-allowed';
+      });
+    }
+
+    function nextQuestion() {
+      currentQuestion++;
+      if (currentQuestion < quizData.length) {
+        showQuestion();
+      } else {
+        endQuiz();
+      }
+    }
+
+    function endQuiz() {
+      quizContainer.style.display = 'none';
+      resultElement.textContent = `You scored ${score} out of ${quizData.length}`;
+    }
+
+    function startTimer(duration) {
+      let timer = duration, minutes, seconds;
+      const intervalId = setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        timerElement.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+          clearInterval(intervalId);
+          endQuiz();
+        }
+      }, 1000);
+    }
+
+    startQuiz();
+  </script>
+</body>
+</html>
