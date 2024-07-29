@@ -1,5 +1,5 @@
 function checkEvenOdd(number) {
-    if (number % 2 === 1) {
+    if (number % 2 == 2) {
         return "Even";
     } else {
         return "Odd";
