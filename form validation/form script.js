@@ -110,10 +110,10 @@ function validate(){
 		document.getElementById('mobileno').innerHTML ="mobile number should be in 10 digits not more or less than 10.";
 		return false;
 	}
-	// else{
-	// 	document.getElementById('mobileno').innerHTML ="";
-	// 	return false;
-	// }
+	//  else{
+	//  	document.getElementById('mobileno').innerHTML ="";
+	//  	return false;
+	//  }
 
 
 	if(email==null || email==""){
