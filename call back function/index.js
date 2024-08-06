@@ -57,9 +57,10 @@ function enrollStudent(student) {
                 resolve();
             }
             else {
+                console.log("this is major error")
                 reject();
             }
-        }, 1000);
+        }, 10000);
     })
 }
 
