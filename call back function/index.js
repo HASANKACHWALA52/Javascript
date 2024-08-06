@@ -69,11 +69,12 @@ function getStudents() {
         let str = "";
         students.forEach(function (student) {
             str += `<li> ${student.name} ${student.subject} ${student.place}</li>`
+            
         });
         document.getElementById('students').innerHTML = str;
         console.log("Students have been fetched");
-    }, 4000);
-}
+    }, 10000);
+} 
 
 let newStudent = { name: "Sunny", subject: "Python",place:"mumbai" }
 enrollStudent(newStudent).then(getStudents).catch(function () {
