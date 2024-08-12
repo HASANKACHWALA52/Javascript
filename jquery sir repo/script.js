@@ -41,9 +41,9 @@ $(document).ready(function(){
   
     // $("p").hide();
   
-    // $("#show").click(function(){
-    //   $("p").toggle();
-    // });
+    $("#show").click(function(){
+      $("p").toggle();
+    });
     
     // $("#btn1").click(function(){
     //   alert("Text: " + $("#test").text());
