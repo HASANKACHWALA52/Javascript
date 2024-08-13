@@ -41,9 +41,9 @@ $(document).ready(function(){
   
     // $("p").hide();
   
-    $("#show").click(function(){
-      $("p").toggle();
-    });
+    // $("#show").click(function(){
+    //   $("p").toggle();
+    // });
     
     // $("#btn1").click(function(){
     //   alert("Text: " + $("#test").text());
@@ -64,16 +64,17 @@ $(document).ready(function(){
       
   
       // $("#btn1").click(function(){
-      //   $("p").append(" <b>Appended text</b>.");
+      //   $("p").append(`<a href="https://chatgpt.com/">hasan</a>`);
       //   });
   
-      //   $("#btn2").click(function(){
-      //     $("ol").append(" <li>List item 4</li>.");
-      //     });
+        // $("#btn2").click(function(){
+        //   $("ol").append(`<h1> hasan</h1>`);
+        //   });
       
       // $("#btn1").click(function(){
       //   $("p").prepend("<b>Prepended text</b>. ");
       //   });
+
       //   $("#btn2").click(function(){
       //   $("ol").prepend("<li>Prepended item</li>");
       //   });
