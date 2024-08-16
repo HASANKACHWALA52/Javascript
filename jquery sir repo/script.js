@@ -83,9 +83,9 @@ $(document).ready(function(){
         //   $("img").before("<b>Before</b>");
         //   });
         
-        //   $("#btn2").click(function(){
-        //   $("img").after("<i>After</i>");
-        //   });
+          // $("#btn2").click(function(){
+          // $("img").after("<i>After</i>");
+          // });
   
           // $("button").click(function(){
           //      $(".myp1").remove();
@@ -109,9 +109,9 @@ $(document).ready(function(){
           //   $("h1, h2, p").toggleClass("blue");
           //   });
   
-        //   $("button").click(function(){
-        //     $("p").css({"background-color": "yellow", "font-size": "200%"});
-        //     });
+          // $("button").click(function(){
+          //   $("p").css({"background-color": "yellow", "font-size": "200%"});
+          //   });
           
           
           
